@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div class="row">
+            <div class="col">
+                User ID:
+            </div>
+            <div class="col">
+                <input type="text" name="txtUserID" id="txtUserID">
+                <span id="statusOfUserID"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Password :
+            </div>
+            <div class="col">
+                <input type="text" name="txtPassword" id="txtPassword">
+                <span id="statusOfPassword"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Name :
+            </div>
+            <div class="col">
+                <input type="text" name="txtName" id="txtName">
+                <span id="statusOfName"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Adress :
+            </div>
+            <div class="col">
+                <input type="text" name="txtAdress" id="txtAdress">
+                <span id="statusOfAdress"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Country :
+            </div>
+            <div class="col">
+                <select name="txtCountry" id="txtCountry">
+                    <option selected>Please select a country</option>
+                    <option id="txtNhat" value="Nhatban">Nhật Bản</option>
+                    <option id="txtViet" value="Vietnam">Viet Nam</option>
+                    <option id="txtTrung" value="Trungquoc">Trung Quốc</option>
+                </select>
+                <span id="statusOfCountry"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                ZIP code :
+            </div>
+            <div class="col">
+                <input type="text" name="txtZipCode" id="txtZipCode">
+                <span id="statusOfZipCode"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Email :
+            </div>
+            <div class="col">
+                <input type="text" name="txtEmail" id="txtEmail">
+                <span id="statusOfEmail"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Sex :
+            </div>
+            <div class="col">
+                <input type="radio" name="txtMale" id="txtMale" value="male">Male
+                <input type="radio" name="txtFemale" id="txtFemale" value="female">Female
+                <span id="statusOfSex"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Language :
+            </div>
+            <div class="col">
+                <input type="checkbox" name="txtEnglish" id="txtEnglish">English
+                <input type="checkbox" name="txtNonEnglish" id="txtNonEnglish">Non English
+                <span id="statusOfLanguage"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                About :
+            </div>
+            <div class="col">
+                <input type="text" name="txtAbout" id="txtAbout">
+                <span id="statusOfAbout"></span>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <input type="submit" name="btnRegister" id="btnRegister" value="Register">
+            </div>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
