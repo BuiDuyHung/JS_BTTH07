@@ -55,15 +55,6 @@ function checkName() {
     return false
 }
 
-function checkAdress() {
-    let txtAdress = document.getElementById('txtAdress')
-    let adressRegex = /^[a-zA-Z0-9]+$/
-    if (adressRegex.test(txtAdress.value)) {
-        return true
-    }
-    return false
-}
-
 function checkZipCode() {
     let txtZipCode = document.getElementById('txtZipCode')
     let zipCodeRegex = /^\d{5}/
@@ -82,20 +73,11 @@ function checkEmail() {
     return false
 }
 
-function checkAbout() {
-    let txtAbout = document.getElementById('txtAbout')
-    let aboutRegex = /^[a-zA-Z]+$/
-    if (aboutRegex.test(txtAbout.value)) {
-        return true
-    }
-    return false
-}
-
-function checkSex() {
+function checkGender() {
     let txtMale = document.getElementById('txtMale')
     let txtFemale = document.getElementById('txtFemale')
 
-    if (txtMale.checked) {
+    if (txtMale.checked || txtFemale.checked) {
         return true
     }
     return false
@@ -113,7 +95,6 @@ function checkLanguage() {
 
 function checkCountry() {
     let txtCountry = document.getElementById('txtCountry')
-
     let seletxtCountry = txtCountry.options[txtCountry.selectedIndex].value
     if (seletxtCountry == 'Nhatban' || seletxtCountry == 'Vietnam' || seletxtCountry == 'Trungquoc') {
         return true
@@ -144,7 +125,7 @@ register.addEventListener('click', function (e) {
         statusOfPassword.textContent = 'Password hợp lệ'
         statusOfPassword.style.color = 'blue'
     } else {
-        statusOfPassword.textContent = 'Passwword không hợp hợp lệ. Độ dài từ 7-12'
+        statusOfPassword.textContent = 'Password không hợp hợp lệ. Độ dài từ 7-12'
         statusOfPassword.style.color = 'red'
     }
 
@@ -154,19 +135,14 @@ register.addEventListener('click', function (e) {
         statusOfName.textContent = 'Name hợp lệ'
         statusOfName.style.color = 'blue'
     } else {
-        statusOfName.textContent = 'Name không hợp hợp lệ. Vui lòng nhập lại'
+        statusOfName.textContent = 'Name không hợp hợp lệ.'
         statusOfName.style.color = 'red'
     }
 
-    // Adress
-    let statusOfAdress = document.getElementById('statusOfAdress')
-    if (checkAdress() == true) {
-        statusOfAdress.textContent = 'Địa chỉ hợp lệ'
-        statusOfAdress.style.color = 'blue'
-    } else {
-        statusOfAdress.textContent = 'Xin mời nhập địa chỉ'
-        statusOfAdress.style.color = 'red'
-    }
+    //Address
+    let statusOfAddress = document.getElementById('statusOfAddress')
+    statusOfAddress.textContent = 'Không bắt buộc'
+    statusOfAddress.style.color = 'blue'
 
     // Country
     let statusOfCountry = document.getElementById('statusOfCountry')
@@ -185,7 +161,7 @@ register.addEventListener('click', function (e) {
         statusOfZipCode.textContent = 'Zip code hợp lệ'
         statusOfZipCode.style.color = 'blue'
     } else {
-        statusOfZipCode.textContent = 'Zip code không hợp hợp lệ. Xin mời nhập lại'
+        statusOfZipCode.textContent = 'Zip code không hợp hợp lệ.'
         statusOfZipCode.style.color = 'red'
     }
 
@@ -195,18 +171,18 @@ register.addEventListener('click', function (e) {
         statusOfEmail.textContent = 'Email hợp lệ'
         statusOfEmail.style.color = 'blue'
     } else {
-        statusOfEmail.textContent = 'Email không hợp hợp lệ. Xin mời nhập lại'
+        statusOfEmail.textContent = 'Email không hợp hợp lệ.'
         statusOfEmail.style.color = 'red'
     }
 
-    // Sex
-    let statusOfSex = document.getElementById('statusOfSex')
-    if (checkSex() == true) {
-        statusOfSex.textContent = 'Giới tính hợp lệ'
-        statusOfSex.style.color = 'blue'
+    // Gender
+    let statusOfGender = document.getElementById('statusOfGender')
+    if (checkGender() == true) {
+        statusOfGender.textContent = 'Giới tính hợp lệ'
+        statusOfGender.style.color = 'blue'
     } else {
-        statusOfSex.textContent = 'Giới tinh chưa được chọn'
-        statusOfSex.style.color = 'red'
+        statusOfGender.textContent = 'Giới tinh chưa được chọn'
+        statusOfGender.style.color = 'red'
     }
 
     // Language
@@ -215,18 +191,13 @@ register.addEventListener('click', function (e) {
         statusOfLanguage.textContent = 'Đã chọn'
         statusOfLanguage.style.color = 'blue'
     } else {
-        statusOfLanguage.textContent = 'Ngoại ngữ chưa được chọn. Xin mời chọn lại'
+        statusOfLanguage.textContent = 'Ngoại ngữ chưa được chọn.'
         statusOfLanguage.style.color = 'red'
     }
 
-    // About
+    //About
     let statusOfAbout = document.getElementById('statusOfAbout')
-    if (checkAbout() == true) {
-        statusOfAbout.textContent = 'About hợp lệ'
-        statusOfAbout.style.color = 'blue'
-    } else {
-        statusOfAbout.textContent = 'About không hợp hợp lệ. Xin mời điền thông tin phù hợp'
-        statusOfAbout.style.color = 'red'
-    }
+    statusOfAbout.textContent = 'Không bắt buộc'
+    statusOfAbout.style.color = 'blue'
 })
 
