@@ -1,0 +1,42 @@
+.row{
+    display: flex;
+}
+form{
+    height: 50%;
+    width: 32%;
+    display: inline-block;
+    box-shadow: 10px 10px bisque;
+    border: 1px solid bisque;
+    margin-top: 100px;
+    text-align: left;
+}
+body{
+    text-align: center;
+}
+.col-1{
+    width: 16%;
+    text-align: right;
+    margin-right: 5px;
+}
+.col input{
+    width: 60%;
+}
+.col{
+    width: 75%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+span{
+    font-size: 12px;
+}
+.col-sub{
+    margin: auto;
+}
+select{
+    width: 150px;
+}
+#txtAbout{
+    height: 100px;
+    width: 70%;
+}
